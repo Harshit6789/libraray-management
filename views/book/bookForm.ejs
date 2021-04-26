@@ -1,0 +1,57 @@
+<html>
+
+<head>
+    <title>Book Registration Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://bootswatch.com/4/litera/bootstrap.min.css">
+    <style>
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row mt-5">
+        <div class="col-md-6 m-auto">
+            <div class="card card-body">
+                <h1 class="text-center mb-3"><i class="fas fa-sign-in-alt"></i> Book Record</h1>
+                <form action="/books/addbook" method="POST">
+                    <div class="form-group">
+                        <label for="bookname" class="form-label">Book Name</label>
+                        <input type="text" class="form-control"  name="bookname" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="authorname" class="form-label">Author Name</label>
+                        <input type="text" class="form-control"  name="authorname">
+                    </div>
+                    <div class="form-group">
+                        <label for="date" class="form-label">Publish Date</label>
+                        <input type="date" class="form-control" name="date">
+                    </div>
+                    <div class="form-group">
+                        <label for="bookprice" class="form-label">Book Price</label>
+                        <input type="number" class="form-control" name="bookprice">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="totalpage" class="form-label">Total Pages</label>
+                        <input type="number" class="form-control"  name="totalpage">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+                <p class="lead mt-4">
+                    Go to the dashboard?<a href="/admin/adminDashboard">Click Here</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

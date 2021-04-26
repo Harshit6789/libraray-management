@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://bootswatch.com/4/litera/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="row mt-5">
+        <div class="col-md-6 m-auto">
+            <div class="card card-body">
+                <h1 class="text-center mb-3">Dashboard</h1>
+                <h4 class="text-center mb-3">Student profile</h4>
+                <% if( results && results.length){%>
+                    <% results.forEach(function (data) { %>
+                        <form>
+                            <div class="form-group">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" value="<%= data.name%>" class="form-control" name="name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="text" value="<%= data.email%>" class="form-control" name="email">
+                            </div>
+                            <div class="form-group">
+                                <label for="class" class="form-label">Class</label>
+                                <input type="text" value="<%= data.class%>" class="form-control" name="class">
+                            </div>
+                        </form>
+                        <div>
+                            <a href="/booking/allbooks/<%= data.id%>"><button class="btn btn-secondary btn-block mb-2">
+                                    Books issue </button></a>
+                            <a href="/booking/showIssueBook/<%= data.id%>"><button class="btn btn-secondary btn-block mb-2"> Show issued book
+                                </button></a>
+                        </div>
+                        <div style="margin-top: 50px;">
+                            <p class="lead mt-4">
+                                Go back to the Student login page? <a href="/studentLogin">Login</a>
+                            </p>
+                        </div>
+            </div>
+        </div>
+    </div>
+    <%})%>
+        <%}%>
+</body>
+
+</html>

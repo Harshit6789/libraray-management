@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <title>check for the author</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://bootswatch.com/4/litera/bootstrap.min.css">
+</head>
+
+<body>
+    <h1 class="text-center mb-3"><i class="fas fa-sign-in-alt"></i>Check for the authors</h1>
+    <div class="container">
+        <form action="/books/search" method="POST">
+            <div class="form-group">
+                <label for="searchauthors" class="form-label">Search for authors</label>
+                <input type="text" class="form-control" name="searchauthors">
+            </div>
+            <div style="margin-left:600px;">
+                <button type="submit" class="btn btn-primary">Search</button>
+            </div>
+            <div class="form-group">
+                <label for="searchbooks" class="form-label">Search for authors</label>
+                <input type="text" class="form-control" name="searchbooks">
+                <button type="submit" class="btn btn-primary">Search for Author</button>
+                <button type="submit" class="btn btn-primary">Search for Books</button>
+            </div>
+        </form>
+    </div>
+
+
+</body>
+
+</html>

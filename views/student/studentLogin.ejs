@@ -1,0 +1,35 @@
+<html>
+
+<head>
+  <title>Student Login Page</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://bootswatch.com/4/litera/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="row mt-5">
+    <div class="col-md-6 m-auto">
+      <div class="card card-body">
+        <h1 class="text-center mb-3"><i class="fas fa-sign-in-alt"></i>Student Login</h1>
+        <form action="/login" method="POST">
+          <div class="form-group">
+            <label for="email">Student Email</label>
+            <input type="email" name="email" class="form-control" placeholder="Enter Email" />
+          </div>
+          <div class="form-group">
+            <label for="password">Student Password</label>
+            <input type="password" name="password" class="form-control" placeholder="Enter Password" />
+          </div>
+          <button type="submit"  class="btn btn-primary btn-block">Login</button>
+        </form>
+        <p class="lead mt-4">
+          No Account? <a href="/studentRegisterForm">Register</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<html>
+
+<head>
+    <title>Issued books</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://bootswatch.com/4/litera/bootstrap.min.css">
+    <style>
+        textarea {
+            resize: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="margin:10px;padding:5px;">
+        <a href="/booking/studentDashboard/<%= studentId%>"><button class="btn btn-primary mb-4">Back to
+                profile</button></a>
+    </div>
+    <div class="row mt-2">
+        <div class="col-md-6 m-auto">
+            <div class="card card-body">
+                <h1 class="text-center mb-3">Issued Books</h1>
+                <form action="">
+                    <div class="form-group">
+                        <label for="">Book Name </label>
+                        <input class="form-control"></input>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Author Name</label>
+                        <input class="form-control"></input>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Publish Date</label>
+                        <input class="form-control"></input>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Book Price</label>
+                        <input class="form-control"></input>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Total Page</label>
+                        <input class="form-control"></input>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

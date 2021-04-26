@@ -1,0 +1,80 @@
+<html>
+
+<head>
+    <title>Book Data</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://bootswatch.com/4/litera/bootstrap.min.css">
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #ddd;
+        }
+
+        td,
+        th {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="margin:10px;padding:5px;">
+        <a href="/booking/studentDashboard/<%= studentId%>"><button class="btn btn-primary mb-2">Back to
+                profile</button></a>
+    </div>
+    <div style="padding: 20px;">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Book</th>
+                    <th>Book Name</th>
+                    <th>Author Name</th>
+                    <th>Publish Date</th>
+                    <th>Book Price</th>
+                    <th>Total Pages</th>
+                </tr>
+            </thead>
+
+            <tbody id="tbody">
+                <% if(userData&&userData.length) {%>
+                    <% userData.forEach(function(data) { %>
+                        <tr>
+                            <td>
+                                <a href="/booking/issueBook/<%= studentId%>/<%= data.bookId%>"><button
+                                        class="btn btn-primary">Book</button></a>
+                            </td>
+                            <td>
+                                <%= data.bookName %>
+                            </td>
+                            <td>
+                                <%= data.authorName %>
+                            </td>
+                            <td>
+                                <%= data.publishDate %>
+                            </td>
+                            <td>
+                                <%= data.bookPrice%>
+                            </td>
+                            <td>
+                                <%= data.totalPage %>
+                            </td>
+                        </tr>
+                        <% }) %>
+                            <% } %>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

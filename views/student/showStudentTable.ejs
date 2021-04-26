@@ -1,0 +1,80 @@
+<html>
+
+<head>
+    <title>Student Data</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://bootswatch.com/4/litera/bootstrap.min.css">
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #ddd;
+        }
+
+        td,
+        th {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="padding: 20px;">
+        <form action="/student" method="POST">
+            <h1>Student Search</h1>
+            <input type="text" name="name" class="mb-2" placeholder="Please enter the student name">
+            <button class="btn btn-primary mb-2" type="submit">Submit</button>
+        </form>
+    </div>
+    <div style="padding: 20px;">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Student Name</th>
+                    <th>Student Email </th>
+                    <th>Student Class</th>
+                    <th>Student Password</th>
+                    <th style="text-align: center;">Actions</th>
+                </tr>
+            </thead>
+
+            <tbody id="tbody">
+                <% if(result.length) {%>
+                    <% result.forEach(function(data) { %>
+                        <tr>
+                            <td>
+                                <%= data.name %>
+                            </td>
+                            <td>
+                                <%= data.email %>
+                            </td>
+                            <td>
+                                <%= data.password %>
+                            </td>
+                            <td>
+                                <%= data.class %>
+                            </td>
+                            <td><a href="/edit/<%= data.id%>"><button class="btn btn-primary">Edit</button></a> <a
+                                    href="/delete/<%= data.id%>"><button class="btn btn-primary">Delete</button></a>
+                            </td>
+                        </tr>
+                        <% }) %>
+                    <% } %>
+
+            </tbody>
+        </table>
+    </div>
+
+</body>
+
+</html>
